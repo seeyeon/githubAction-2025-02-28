@@ -1,14 +1,13 @@
 name: work-1
-on :
+on:
   push:
     branches:
-      -main
-
+      - main
 jobs:
   hello1:
-    runs=on : ubuntu-latest
-    setps:
-      - name : sayHi
-        run : echo "H1"
-        - name : sayMyName
-          run : echo ${{ github.actor }}"
+    runs-on: ubuntu-latest
+    steps:
+      - name: sayHi
+        run: echo "Hi"
+      - name: sayMyName
+        run: echo "${{ github.actor }}"
