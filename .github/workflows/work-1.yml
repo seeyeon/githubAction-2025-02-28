@@ -1,0 +1,14 @@
+name: work-1
+on :
+  push:
+    branches:
+      -main
+
+jobs:
+  hello1:
+    runs=on : ubuntu-latest
+    setps:
+      - name : sayHi
+        run : echo "H1"
+        - name : sayMyName
+          run : echo ${{ github.actor }}"
